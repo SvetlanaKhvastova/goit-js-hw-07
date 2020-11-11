@@ -1,0 +1,11 @@
+.enumeration {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  text-align: center;
+
+  display: grid;
+  grid-gap: 2vw;
+}
