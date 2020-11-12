@@ -1,5 +1,4 @@
 const totalCategory = document.querySelectorAll('.item');
-// console.log(totalCategory);
 console.log(`В списке ${totalCategory.length} категории.`);
 
 const listArray = [...totalCategory]
