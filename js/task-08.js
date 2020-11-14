@@ -3,11 +3,13 @@ const render = document.querySelector('[data-action="render"]');
 const destroy = document.querySelector('[data-action="destroy"]');
 const boxes = document.getElementById('boxes');
 // console.log(collectionInput, render, destroy);
-
 render.addEventListener('click', renderBoxes);
+
 destroy.addEventListener('click', destroyBoxes);
 
 function renderBoxes() {
+  // render.removeEventListener('click', renderBoxes);
+  boxes.innerHTML = '';
   createBoxes(collectionInput.value);
 }
 
