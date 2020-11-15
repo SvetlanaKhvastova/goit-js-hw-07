@@ -8,7 +8,6 @@ render.addEventListener('click', renderBoxes);
 destroy.addEventListener('click', destroyBoxes);
 
 function renderBoxes() {
-  // render.removeEventListener('click', renderBoxes);
   boxes.innerHTML = '';
   createBoxes(collectionInput.value);
 }
@@ -16,21 +15,24 @@ function renderBoxes() {
 function createBoxes(amount) {
   let x = 0;
   let count = 20;
-
+  const arr = [];
   for (let i = 1; i <= amount; i++) {
     x += 1;
     count += 10;
     const div = document.createElement('div');
+
     div.textContent = x;
     div.style.width = count + 'px';
     div.style.height = count + 'px';
     div.style.backgroundColor = `rgba( ${random()} , ${random()} , ${random()} )`;
-    boxes.append(div);
+    arr.push(div);
+    boxes.append(...arr);
   }
 }
 
 function destroyBoxes() {
   boxes.innerHTML = '';
+  collectionInput.value = '';
 }
 
 function random() {

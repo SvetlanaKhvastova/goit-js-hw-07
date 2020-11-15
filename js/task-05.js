@@ -3,6 +3,14 @@ const titleName = document.getElementById('name-output');
 
 inputRef.addEventListener('input', hundleInputName);
 
+// function hundleInputName(event) {
+//   if (inputRef.value === '') {
+//     titleName.textContent = 'незнакомец';
+//   } else titleName.textContent = event.target.value;
+// }
+
 function hundleInputName(event) {
-  titleName.textContent = event.target.value;
+  inputRef.value === ''
+    ? (titleName.textContent = 'незнакомец')
+    : (titleName.textContent = event.target.value);
 }
