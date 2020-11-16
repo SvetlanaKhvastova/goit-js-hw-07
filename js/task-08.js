@@ -26,8 +26,8 @@ function createBoxes(amount) {
     div.style.height = count + 'px';
     div.style.backgroundColor = `rgba( ${random()} , ${random()} , ${random()} )`;
     arr.push(div);
-    boxes.append(...arr);
   }
+  boxes.append(...arr);
 }
 
 function destroyBoxes() {

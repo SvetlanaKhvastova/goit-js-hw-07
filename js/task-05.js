@@ -9,8 +9,13 @@ inputRef.addEventListener('input', hundleInputName);
 //   } else titleName.textContent = event.target.value;
 // }
 
+// function hundleInputName(event) {
+//   inputRef.value === ''
+//     ? (titleName.textContent = 'незнакомец')
+//     : (titleName.textContent = event.target.value);
+// }
+
 function hundleInputName(event) {
-  inputRef.value === ''
-    ? (titleName.textContent = 'незнакомец')
-    : (titleName.textContent = event.target.value);
+  titleName.textContent =
+    inputRef.value === '' ? 'незнакомец' : event.target.value;
 }
