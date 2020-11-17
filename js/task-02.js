@@ -8,14 +8,6 @@ const ingredients = [
 ];
 
 // // больше подходит метод map, чтобы ДОМ много раз не перерендерился
-// const elementUl = document.getElementById('ingredients');
-
-// const listIngredients = ingredients.map(product => {
-//   const list = document.createElement('li');
-//   list.textContent = product;
-
-//   elementUl.appendChild(list);
-// });
 
 const elementUl = document.getElementById('ingredients');
 
